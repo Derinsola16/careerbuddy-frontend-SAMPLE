@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-family: 'Albert Bold';
+  src: url('./assets/fonts/AlbertSans-ExtraBold.ttf');
+  /* url('./assets/fonts/AlbertSans-Italic-VariableFont_wght.ttf'), */
+}
+
+@font-face {
+  font-family: 'Albert';
+  src: url('./assets/fonts/AlbertSans-VariableFont_wght.ttf');
+  /* url('./assets/fonts/AlbertSans-Italic-VariableFont_wght.ttf'), */
+}
+
+@font-face {
+  font-family: 'Albert Medium';
+  src: url('./assets/fonts/AlbertSans-Medium.ttf');
+  /* url('./assets/fonts/AlbertSans-Italic-VariableFont_wght.ttf'), */
+}
