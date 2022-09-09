@@ -7,7 +7,7 @@
           Join the world's #1 startup community specialized in remote & local technical talent and opportunities
         </p>
       </div>
-      <div class="w-1/2 grow m-auto">
+      <div class="w-1/ grow m-auto">
         <img src="@/assets/images/hero.png" alt="hero" />
       </div>
     </div>
