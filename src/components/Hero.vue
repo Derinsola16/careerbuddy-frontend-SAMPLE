@@ -7,6 +7,7 @@
           Join the world's #1 startup community specialized in remote & local technical talent and opportunities
         </p>
       </div>
+
       <div class="w-1/2 grow m-auto">
         <!-- <img src="@/assets/images/hero.png" alt="hero" /> -->
         <!-- <carousel :cards="cards" :stack-width="360" :card-width="280">
@@ -19,6 +20,10 @@
             <div style="width: 100%; height: 100%" :style="{ background: card.back }"></div>
           </template> 
         </carousel>-->
+
+      <div class="w-1/ grow m-auto">
+        <img src="@/assets/images/hero.png" alt="hero" />
+
       </div>
     </div>
   </main>
