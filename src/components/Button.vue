@@ -101,7 +101,7 @@ export default {
     componentClass() {
       const base = [
         'flex',
-        this.pointer ? 'cursor-not-allowed' : 'cursor-pointer',
+        this.pointer ? 'cursor-not-allowed cursor-none' : 'cursor-pointer',
         'justify-center',
         'items-center',
         'whitespace-nowrap',
