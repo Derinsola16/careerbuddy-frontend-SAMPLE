@@ -26,7 +26,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import Carousel from '@/components/Carousel.vue';
+import Carousel from '@/components/Slider.vue';
 const cards = ref([
   { background: require('@/assets/icons/nav.svg') },
   { background: require('@/assets/logo.png') },

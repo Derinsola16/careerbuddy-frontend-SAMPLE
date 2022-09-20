@@ -1,9 +1,10 @@
 <template>
-  <nav class="sticky top-0 inset-x-0 z-30 w-screen lg:px-20 py-4 px-5 bg-white mb-20">
+  <nav class="sticky top-0 inset-x-0 z-30 w-screen lg:px-20 py-4 px-4 bg-white mb-20">
     <div class="flex items-center justify-between">
-      <div class="lg:flex items-center">
-        <router-link to="/"><img src="@/assets/images/logo.svg" alt="logo" class="object-cover" /></router-link>
-        <p class="bg-brand-green bg-opacity-10 hidden text-brand-green rounded-full p-2.5 lg:ml-5 text-center">We’re hiring! 🎉</p>
+      <div class="flex items-center">
+        <router-link to="/" class="hidden lg:block"><img src="@/assets/images/logo.svg" alt="logo" class="object-cover" /></router-link>
+        <router-link to="/" class="lg:hidden"><img src="@/assets/images/logosmall.svg" alt="logo" class="object-cover" /></router-link>
+        <p class="bg-brand-green bg-opacity-10 lg:text-sm text-xs text-brand-green rounded-full p-2.5 lg:ml-3.5 ml-2 text-center">We’re hiring! 🎉</p>
       </div>
       <Nav fill="black" class="lg:hidden" />
       <div class="lg:flex items-center hidden">
