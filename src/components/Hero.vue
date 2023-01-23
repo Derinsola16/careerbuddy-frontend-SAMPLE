@@ -1,49 +1,61 @@
 <template>
   <main>
-    <div class="md:flex px-20 items-center justify-between w-full">
-      <div class="w-1/2">
-        <p class="text-[80px] leading-[80px] text-brand-black font-albertBold">We take the hassle out of job hunting & talent sourcing</p>
-        <p class="font-normal text-xl -tracking-widest text-brand-black">
-          Join the world's #1 startup community specialized in remote & local technical talent and opportunities
+    <!-- w-[454px] -->
+    <div class="lg:flex items-center justify-between w-full">
+      <div class="lg:w-1/2 lg:pr-28">
+        <Label class="flex" v-if="labelText" :labelText="labelText" />
+        <p :class="[white ? 'text-white' : 'text-brand-black']" class="lg:text-[60px] font-albertExtraBold leading-[64px] mb-3">{{ title }}</p>
+        <p class="font-albertSmall mb-8" :class="[white ? 'text-white' : 'text-brand-black']">
+          {{ caption }}
         </p>
+        <slot name="button" />
       </div>
-
-      <div class="w-1/2 grow m-auto">
-        <!-- <img src="@/assets/images/hero.png" alt="hero" /> -->
-        <!-- <carousel :cards="cards" :stack-width="360" :card-width="280">
-          <template #card="{ card }">
-            <!- <div style="width: 100%; height: 100%" :style="{ background: card.background }"></div> ->
-            <img style="width: 100%; height: 100%" :src="card.background" alt="hero" />
+      <div class="self-start">
+        <VueCardStack
+          :cards="cards"
+          :card-width="350"
+          :card-height="350"
+          :stack-width="stackWidth"
+          :max-visible-cards="parseInt(maxVisibleCards)"
+          :scale-multiplier="parseFloat(scaleMultiplier)"
+          ref="stack"
+        >
+          <template v-slot:card="{ card }">
+            <img style="width: 100%; height: 100%" :src="card.background" alt="hero" class="rounded-xl object-cover" />
           </template>
-
-          <template #nav>
-            <div style="width: 100%; height: 100%" :style="{ background: card.back }"></div>
-          </template> 
-        </carousel>-->
-
-      <div class="w-1/ grow m-auto">
-        <img src="@/assets/images/hero.png" alt="hero" />
-
+        </VueCardStack>
       </div>
     </div>
   </main>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-import Carousel from '@/components/Carousel.vue';
-const cards = ref([
-  { background: require('@/assets/icons/nav.svg') },
-  { background: require('@/assets/logo.png') },
-  { background: require('@/assets/images/hero.png') },
-  { background: require('@/assets/logo.png') },
-  { background: require('@/assets/icons/nav.svg') },
-  { background: require('@/assets/images/hero.png') },
-  { back: '#fc8890' },
-  { back: '#b35d7f' },
-  { back: '#fc8890' },
-  { back: '#b35d7f' },
-  { back: '#fc8890' },
-  { back: '#b35d7f' },
-]);
+<script>
+import VueCardStack from '@/components/cardStack/CardStack.vue';
+import Label from '@/components/Label.vue';
+import { debounce } from '@/utils/debounce';
+export default {
+  props: { cards: Array, title: String, caption: String, labelText: String, white: Boolean },
+  components: {
+    VueCardStack,
+    Label,
+  },
+  data() {
+    return {
+      maxVisibleCards: 5,
+      containerWidth: 470,
+      scaleMultiplier: 1,
+    };
+  },
+  computed: {
+    stackWidth: {
+      get() {
+        return this.containerWidth;
+      },
+      set: debounce(function (val) {
+        this.containerWidth = parseInt(val);
+        this.$refs.stack.rebuild();
+      }, 100),
+    },
+  },
+};
 </script>

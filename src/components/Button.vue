@@ -109,9 +109,10 @@ export default {
         'transition-colors',
         'focus:ring-0',
         'duration-150',
+        'text-base font-semibold',
         this.active ? 'ring ring-black' : 'focus:ring-0',
         this.small ? 'p-2 rounded-full' : 'p-3 rounded-xl',
-        this.outline ? 'border' : 'border-0',
+        this.outline ? 'border-2' : 'border-0',
         this.full ? 'w-full' : '',
         this.medium ? 'w-40' : '',
 
