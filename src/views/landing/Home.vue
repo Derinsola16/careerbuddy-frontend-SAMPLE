@@ -1,6 +1,21 @@
 <template>
   <main>
-    <!-- <Hero /> -->
+    <!-- Hero -->
+    <section class="mb-32">
+      <Hero
+        class="lg:pl-20 pr-4 px-5"
+        :cards="cards"
+        title="We take the hassle out of job hunting & talent sourcing"
+        caption="Join the world's #1 startup community specialized in remote & local technical talent and opportunities"
+      >
+        <template #button>
+          <div class="flex space-x-5">
+            <Button label="Find a job" color="primary" to="/jobseekers" /> <Button label="Hire Top Talent" color="primary" to="/companies" outline />
+          </div>
+        </template>
+      </Hero>
+    </section>
+    <!-- company slider -->
     <section>
       <Slider>
         <div class="flex">
@@ -12,7 +27,7 @@
         </div>
       </Slider>
     </section>
-
+    <!-- Connect -->
     <section>
       <div class="lg:mt-28 mt-20">
         <div class="flex items-center flex-col px-4 text-center mb-7 lg:mb-9">
@@ -25,6 +40,7 @@
         <img src="@/assets/images/connect.svg" alt="" class="m-auto" />
       </div>
     </section>
+    <!-- Details -->
     <section>
       <Detail
         :labelText="detailInfo.labelText"
@@ -45,25 +61,25 @@
             </p>
             <ul class="list-none font-normal lg:text-base text-sm text-opacity-60 text-brand-black mb-6">
               <li class="flex items-center">
-                <Check class="mr-3" />
+                <Check fill="#1A0004" class="mr-3" />
                 Unique jobs at startups and tech companies you can't find anywhere else
               </li>
               <li class="flex items-center text-sm mb-2">
-                <Check class="mr-3" />
+                <Check fill="#1A0004" class="mr-3" />
                 Say goodbye to cover letters - your profile is all you need. One click to apply and you're done.
               </li>
               <li class="flex items-center text-sm mb-2">
-                <Check class="mr-3" />
+                <Check fill="#1A0004" class="mr-3" />
                 Everything you need to know to job search - including seeing salary and stock options upfront when looking.
               </li>
               <li class="flex items-center text-sm mb-2">
-                <Check class="mr-3" />
+                <Check fill="#1A0004" class="mr-3" />
                 Connect directly with founders at top startups - no third party recruiters allowed.
               </li>
             </ul>
             <div class="flex items-center mb-6 justify-center lg:justify-start">
-              <Button label="Find your next job" color="primary" class="mr-4" />
-              <Button label="Learn More" color="primary" outline />
+              <Button label="Find your next job" color="primary" class="mr-4" to="/signup" />
+              <Button label="Learn More" color="primary" outline to="/jobseekers" />
             </div>
           </div>
         </template>
@@ -92,17 +108,17 @@
             </p>
             <ul class="list-none font-normal lg:text-base text-sm text-opacity-60 text-brand-black mb-6">
               <li class="flex items-center text-sm mb-2">
-                <Check class="mr-3" />
+                <Check fill="#1A0004" class="mr-3" />
                 8 million responsive and startup-ready candidates, with all the information you need to vet them
               </li>
               <li class="flex items-center text-sm">
-                <Check class="mr-3" />
+                <Check fill="#1A0004" class="mr-3" />
                 Everything you need to kickstart your recruiting - get job posts, company branding, and HR tools set up within 10 minutes, for free
               </li>
             </ul>
             <div class="flex items-center mb-6 justify-center lg:justify-start">
-              <Button label="Find your next job" color="primary" class="mr-4" />
-              <Button label="Learn More" color="primary" outline />
+              <Button label="Hire Top Talent" color="primary" class="mr-4" to="/signup" />
+              <Button label="Learn More" color="primary" outline to="/companies" />
             </div>
           </div>
         </template>
@@ -111,6 +127,7 @@
         </template>
       </Detail>
     </section>
+    <!-- Word on street -->
     <section>
       <div class="flex lg:items-center items-start flex-col px-4">
         <Label labelText="WORD ON THE STREET" :icon="Loud" class="" />
@@ -130,11 +147,35 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="lg:flex items-center justify-between grid gap-6 lg:gap-12 lg:px-20 px-4">
+    <!-- Tech team -->
+    <section class="px-20 hidden">
+      <div class="bg-brand-red rounded-lg">
+        <div class="pl-11">
+          <div class="">
+            <Hero
+              white
+              labelText="INTRODUCING 🎉"
+              :cards="cards"
+              title="We take the hassle out of job hunting & talent sourcing"
+              caption="Join the world's #1 startup community specialized in remote & local technical talent and opportunities"
+            >
+              <template #button>
+                <div class="flex space-x-5">
+                  <Button label="Hire Top Talent" color="white" to="/companies" />
+                  <Button label="Learn More" color="white" to="/companies" outline />
+                </div>
+              </template>
+            </Hero>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Spotlight -->
+    <section class="">
+      <div class="lg:flex items-center justify-center grid gap-6 lg:gap-12 lg:px-20 px-4 relative top-48">
         <SpotlightCard
           :img="require('@/assets/images/spot-light.svg')"
-          bgColor="#ECB20A"
+          bgColor="bg-brand-spot"
           label="IN THE SPOTLIGHT"
           title="Get Featured"
           text="Apply to be featured
@@ -144,7 +185,7 @@
         />
         <SpotlightCard
           :img="require('@/assets/images/salary-mail.svg')"
-          bgColor="#EE9430"
+          bgColor="bg-brand-mail"
           label="SALARY INSIGHTS"
           title="Know your Worth"
           text="We have the data. Research by job title, industry, and company size to find your salary range and be prepared to nail your negotiations."
@@ -152,6 +193,38 @@
         />
       </div>
     </section>
+    <!-- Reference -->
+    <section>
+      <div class="bg-[#060505] h-[908px] flex justify-center">
+        <div class="px-36 flex items-center">
+          <div class="">
+            <p class="text-white lg:font-albertBold lg:text-5xl mb-4 lg:w-2/5">Stand a chance to earn up to $1,000 🤑</p>
+            <p class="text-white font-normal text-base mb-4 w-[51%]">
+              Any of your high performing friends or colleagues looking for work? Send them our way. You could earn up to
+              <span class="font-bold">$1,000 </span> if they get hired through CareerBuddy.
+            </p>
+            <ul class="list-none font-normal lg:text-base text-sm text-opacity-60 text-brand-black mb-6">
+              <li class="flex items-center text-sm text-white mb-2">
+                <Check class="mr-3" fill="white" />
+                Sign up to create an account
+              </li>
+              <li class="flex items-center text-sm text-white mb-2">
+                <Check class="mr-3" fill="white" />
+                Refer your friends to sign up with us
+              </li>
+              <li class="flex items-center text-sm text-white">
+                <Check class="mr-3" fill="white" />
+                Get paid when they get hired
+              </li>
+            </ul>
+            <Button label="Start Referring" color="primary" />
+          </div>
+          <div class="hidden lg:block text-white">slider</div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter -->
+    <section></section>
   </main>
 </template>
 
@@ -167,17 +240,6 @@ import Loud from '@/assets/icons/loud.svg?inline';
 import Stroke from '@/assets/icons/stroke.svg?inline';
 import { ref } from 'vue';
 
-const settings = ref({
-  arrows: false,
-  dots: true,
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  speed: 2000,
-  autoplaySpeed: 2000,
-  cssEase: 'linear',
-});
 const detailInfo = ref({
   testimony: 'Careerbuddy supported me in every step of the hiring process and even helped me get favorable working terms with my employers.',
   labelText: 'FOR JOB SEEKERS',
@@ -193,4 +255,22 @@ const detailInfoTwo = ref({
   name: 'Segun Makinde',
   role: 'Chief Operations Officer, Casava',
 });
+const cards = ref([
+  { background: require('@/assets/images/sales.png') },
+  { background: require('@/assets/images/hero.png') },
+  { background: require('@/assets/images/man.png') },
+  { background: require('@/assets/images/sales.png') },
+  { background: require('@/assets/images/hero.png') },
+  { background: require('@/assets/images/sales.png') },
+  { background: require('@/assets/images/hero.png') },
+  { background: require('@/assets/images/man.png') },
+  { background: require('@/assets/images/sales.png') },
+  { background: require('@/assets/images/hero.png') },
+]);
 </script>
+
+<style scoped>
+.bg {
+  background: url('../../assets/images/bg.svg');
+}
+</style>

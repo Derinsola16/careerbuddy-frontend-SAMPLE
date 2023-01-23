@@ -5,14 +5,19 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        albertSmall: ['Albert Small'],
         albert: ['Albert'],
+        albertSemiBold: ['Albert Semi Bold'],
         albertBold: ['Albert Bold'],
-        albertMedium: ['Albert Bold'],
+        albertExtraBold: ['AlbertExtra'],
       },
       colors: {
         'brand-black': '#1A0004',
         'brand-primary': '#FF2449',
         'brand-green': '#089115',
+        'brand-spot': '#ECB20A',
+        'brand-mail': '#EE9430',
+        'brand-red': '#E51A3C',
       },
     },
   },

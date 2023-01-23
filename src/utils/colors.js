@@ -23,7 +23,7 @@ export const colorsBgHover = {
 };
 
 export const colorsBorders = {
-  white: 'border-brand-black',
+  white: 'border-white',
   black: 'border-brand-black',
   primary: 'border-brand-primary',
   primaryOpacity: 'border-brand-primary border-opacity-20',
@@ -55,7 +55,7 @@ export const colorsOutline = {
 };
 
 export const colorsOutlineHover = {
-  white: 'hover:bg-black hover:text-white',
+  white: 'hover:bg-white hover:text-brand-black',
   black: 'hover:bg-black hover:text-white',
   primary: 'hover:bg-brand-primary hover:text-white',
   // success: 'hover:bg-brand-green hover:text-white',
