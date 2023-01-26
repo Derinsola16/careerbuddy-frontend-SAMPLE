@@ -36,6 +36,10 @@
             opportunities come to you
           </p>
         </div>
+
+        <!-- Search job query -->
+        <Search />
+
         <img src="@/assets/images/connect.svg" alt="" class="m-auto" />
       </div>
     </section>
@@ -202,6 +206,7 @@ import Loud from '@/assets/icons/loud.svg?inline';
 import Label from '@/components/Label.vue';
 import SpotlightCard from '@/components/SpotlightCard.vue';
 import { ref } from 'vue';
+import Search from '@/components/Search.vue';
 
 const cards = ref([
   { background: require('@/assets/images/sales.png') },
