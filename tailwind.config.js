@@ -14,6 +14,8 @@ module.exports = {
       colors: {
         'brand-black': '#1A0004',
         'brand-primary': '#FF2449',
+        'overlay': 'rgba(26, 0, 4, 0.7)',
+        'brand-primary-light': '#FFFCF0',
         'brand-green': '#089115',
         'brand-spot': '#ECB20A',
         'brand-mail': '#EE9430',
