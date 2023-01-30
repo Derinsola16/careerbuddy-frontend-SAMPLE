@@ -279,17 +279,48 @@
 
   <section>
     <!-- Join the 100k -->
-    <div class="flex mt-32 mb-20">
-      <div class="bg-red-500 w-[1040px] h-[124px] font-albert font-[800] text-[56px] -tracking-wide leading-[40px] text-brand-black">
+    <div class="mt-32 mb-20 w-[914px]">
+      <p class="w-[900px] h-[124px] font-albert font-[800] text-[56px] -tracking-wide leading-[61.6px] text-brand-black">
         Join the
-        <p class="text-brand-primary">100K+</p>
+        <span class="text-brand-primary">100K+</span>
         startups building their teams with us
-      </div>
+      </p>
     </div>
   </section>
 
   <section>
-    <!-- carousel -->
+    <!-- carousel logo-->
+    <Slider>
+      <div class="flex">
+        <div v-for="x in 5" :key="x" class="items flex mr-3 space-x-3">
+          <img src="@/assets/icons/g8.svg" class="h-10" />
+          <img src="" class="h-10" />
+          <img src="" class="h-10" />
+        </div>
+      </div>
+    </Slider>
+  </section>
+
+  <section>
+    <!-- subscribe  -->
+    <div class="flex justify-around mt-20 w-[1264px] h-[343px] rounded-[20px] bg-black bg-[url('./assets/icons/bg-bg.png')]">
+      <div class="flex justify-center items-center w-[610px]">
+        <div>
+          <p class="w-[630px] h-[53px] font-[800] text-[48px] leading-[52.8px] -tracking-wide text-white font-albert text-center">
+            Subscribe to our newsletter
+          </p>
+          <p class="w-[630px] h-[48px] opacity-80 font-albert font-[400] text-[16px] -tracking-wide leading-[24px] text-white text-center mt-3">
+            Get to know about top open jobs in Africa’s fastest-growing startups before anyone else. Every week, we'll send you all the top jobs in
+            startups across Africa.
+          </p>
+          <!-- button -->
+          <div class="flex justify-between w-[660px] mt-5">
+            <input class="w-[460px] h-[64px] bg-white rounded-[10px]" type="text" />
+            <button class="w-[183px] h-[64px] rounded-[10px] bg-brand-primary text-[16px] font-albert font-[600] text-white">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
