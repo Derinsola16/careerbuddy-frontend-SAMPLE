@@ -1,7 +1,7 @@
 <template>
   <main>
     <div
-      class="lg:flex lg:px-20 px-4 items-center justify-between lg:pt-20 pt-10 w-full pb-9"
+      class="lg:flex lg:px-20 px-5 items-center justify-between lg:pt-20 pt-10 w-full pb-9"
       :class="[imgLeft ? 'bg-white flex-row-reverse' : 'bg-[#FFFAFB]']"
     >
       <div :class="[textHolder]" class="mb-12 lg:mb-0">

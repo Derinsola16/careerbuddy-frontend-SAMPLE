@@ -4,8 +4,8 @@
     <div class="lg:flex items-center justify-between w-full">
       <div class="lg:w-1/2 lg:pr-28">
         <Label class="flex" v-if="labelText" :labelText="labelText" />
-        <p :class="[white ? 'text-white' : 'text-brand-black']" class="lg:text-[60px] font-albertExtraBold leading-[64px] mb-3">{{ title }}</p>
-        <p class="font-albertSmall mb-8" :class="[white ? 'text-white' : 'text-brand-black']">
+        <p :class="[white ? 'text-white' : 'text-brand-black']" class="text-5xl md:w-auto lg:text-[60px] font-albertExtraBold lg:leading-[64px] mb-5 md:mb-3">{{ title }}</p>
+        <p class="font-albertSmall mb-8 pr-12 md:pr-0" :class="[white ? 'text-white' : 'text-brand-black']">
           {{ caption }}
         </p>
         <slot name="button" />
