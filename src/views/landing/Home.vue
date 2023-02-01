@@ -32,7 +32,7 @@
       <div class="lg:mt-28 mt-20">
         <div class="flex items-center flex-col px-4 text-center mb-7 lg:mb-9">
           <p class="font-albertExtraBold lg:text-5xl text-4xl text-brand-black mb-3">Leverage World-Class Talent</p>
-          <p class="text-brand-black md:text-xl py-2 md:py-0 font-normal text-center lg:w-[40%]">
+          <p class="text-brand-black md:px-10 md:text-xl py-2 md:py-0 font-normal text-center lg:w-[50%] lg:text-lg lg:px-0">
             We are the largest, globally-distributed network of top business, design, and technology talent, ready to tackle your most important
             initiatives.
           </p>
@@ -40,95 +40,14 @@
         <img src="@/assets/images/connect.svg" alt="" class="m-auto" />
       </div>
     </section>
+
     <!-- Details -->
-    <section>
-      <Detail
-        :labelText="detailInfo.labelText"
-        :testimony="detailInfo.testimony"
-        :profile="detailInfo.profileImage"
-        :name="detailInfo.name"
-        :role="detailInfo.role"
-        textHolder="lg:w-1/2 lg:pr-28"
-        class="relative lg:bottom-[15.3rem] bottom-20"
-      >
-        <template #text>
-          <div class="">
-            <p class="font-normal lg:text-5xl text-4xl text-brand-black text-opacity-70 mb-4">
-              <span class="font-albertBold text-brand-black">The right job</span> can change everything
-            </p>
-            <p class="font-normal lg:text-base text-sm text-brand-black text-opacity-80 mb-3">
-              We provide access to top companies, a community of experts, and resources that can help accelerate your career.
-            </p>
-            <ul class="list-none font-normal lg:text-base text-sm text-opacity-60 text-brand-black mb-6">
-              <li class="flex items-center mb-2">
-                <Check fill="#1A0004" class="mr-3" />
-                Unique jobs at startups and tech companies you can't find anywhere else
-              </li>
-              <li class="flex items-center mb-2">
-                <Check fill="#1A0004" class="mr-3" />
-                Say goodbye to cover letters - your profile is all you need. One click to apply and you're done.
-              </li>
-              <li class="flex items-center mb-2">
-                <Check fill="#1A0004" class="mr-3" />
-                Everything you need to know to job search - including seeing salary and stock options upfront when looking.
-              </li>
-              <li class="flex items-center mb-2">
-                <Check fill="#1A0004" class="mr-3" />
-                Connect directly with founders at top startups - no third party recruiters allowed.
-              </li>
-            </ul>
-            <div class="flex items-center mb-6 justify-start">
-              <Button label="Find your next job" color="primary" class="mr-4" to="/signup" />
-              <Button label="Learn More" color="primary" outline to="/jobseekers" />
-            </div>
-          </div>
-        </template>
-        <template #image>
-          <img src="@/assets/images/sales.png" alt="image" class="rounded-xl object-cover w-60 lg:w-full m-auto" />
-        </template>
-      </Detail>
-      <Detail
-        :label="true"
-        :labelText="detailInfoTwo.labelText"
-        :testimony="detailInfoTwo.testimony"
-        :profile="detailInfoTwo.profileImage"
-        :name="detailInfoTwo.name"
-        :role="detailInfoTwo.role"
-        textHolder="lg:w-1/2 lg:pr-28"
-        class="relative lg:bottom-[15.3rem] bottom-20"
-        imgLeft
-      >
-        <template #text>
-          <div class="">
-            <p class="font-normal lg:text-5xl text-4xl text-brand-black text-opacity-70 mb-4">
-              Managing a company is hard<span class="font-albertBold text-brand-black">, hiring talent shouldn’t be</span>
-            </p>
-            <p class="font-normal lg:text-base text-sm text-brand-black text-opacity-80 mb-3">
-              We do the vetting for you! We review the world's top tech talent and highlight candidates directly to you 2x a week.
-            </p>
-            <ul class="list-none font-normal lg:text-base text-sm text-opacity-60 text-brand-black mb-6">
-              <li class="flex items-center text-sm mb-2">
-                <Check fill="#1A0004" class="mr-3" />
-                8 million responsive and startup-ready candidates, with all the information you need to vet them
-              </li>
-              <li class="flex items-center text-sm">
-                <Check fill="#1A0004" class="mr-3" />
-                Everything you need to kickstart your recruiting - get job posts, company branding, and HR tools set up within 10 minutes, for free
-              </li>
-            </ul>
-            <div class="flex items-center mb-6 justify-start">
-              <Button label="Hire Top Talent" color="primary" class="mr-4" to="/signup" />
-              <Button label="Learn More" color="primary" outline to="/companies" />
-            </div>
-          </div>
-        </template>
-        <template #image>
-          <img src="@/assets/images/man.png" alt="image" class="rounded-xl object-cover w-60 lg:w-full m-auto" />
-        </template>
-      </Detail>
-    </section>
+    <div class="space-y-6 md:space-x-0">
+      <DetailSection />
+    </div>
+
     <!-- Word on street -->
-    <section>
+    <section class="mt-20">
       <div class="flex lg:items-center items-start flex-col px-4">
         <Label labelText="WORD ON THE STREET" :icon="Loud" class="" />
         <p class="font-albertExtraBold lg:text-5xl text-4xl text-brand-black">Hear what others are saying</p>
@@ -136,7 +55,7 @@
           <div
             v-for="x in 20"
             :key="x"
-            class="border border-brand-black px-7 py-8 md:py-20 rounded-xl snap-proximity snap-center snap-always flex-shrink-0 w-[244px] md:w-[293px]"
+            class="border border-brand-black px-7 py-8 md:py-20 lg:py-14 rounded-xl snap-proximity snap-center snap-always flex-shrink-0 w-[244px] md:w-[293px]"
           >
             <Stroke class="mb-6" />
             <p class="text-sm md:text-base text-brand-black font-normal">
@@ -147,32 +66,53 @@
         </div>
       </div>
     </section>
+
     <!-- Tech team -->
-    <section class="px-20 hidden">
-      <div class="bg-brand-red rounded-lg">
-        <div class="pl-11">
-          <div class="">
-            <Hero
-              white
-              labelText="INTRODUCING 🎉"
-              :cards="cards"
-              title="We take the hassle out of job hunting & talent sourcing"
-              caption="Join the world's #1 startup community specialized in remote & local technical talent and opportunities"
-            >
-              <template #button>
-                <div class="flex space-x-5">
-                  <Button label="Hire Top Talent" color="white" to="/companies" />
-                  <Button label="Learn More" color="white" to="/companies" outline />
+    <section class="lg:px-20 px-5 mt-12 lg:mt-28">
+      <div
+        class="bg-brand-red flex items-center rounded-3xl md:rounded-2xl relative intro-bg w-full px-8 py-10 before:opacity-40 md:before:opacity-[0.15]"
+      >
+        <!-- text  -->
+        <div class="md:w-1/2 z-20 space-y-5">
+          <p class="text-white font-semibold lg:text-base text-sm text-center bg-black rounded-xl py-2.5 px-6 inline-block">INTRODUCING 🎉</p>
+          <h2 class="font-albertBold text-[#fff] text-4xl lg:text-5xl">Top-tier tech teams built & managed for you.</h2>
+          <p class="text-sm text-[#fff] w-[85%]">
+            We help companies build and manage remote teams worldwide. We take care of everything; hiring, onboarding, remuneration, regulation & even
+            physical workspaces if required.
+          </p>
+          <div class="flex space-x-5">
+            <Button label="Hire Top Talent" color="white" to="/companies" />
+            <Button label="Learn More" color="white" to="/signup" outline />
+          </div>
+        </div>
+        <!-- image  -->
+        <div class="w-1/2 z-20 hidden md:flex justify-center">
+          <div class="relative flex items-center">
+            <!-- light divs  -->
+            <div class="w-[280px] h-[280px] absolute top-0 left-0 bg-white opacity-40 ml-9 rounded-lg mt-2.5"></div>
+            <div class="w-[260px] h-[260px] absolute top-0 left-0 bg-white opacity-20 ml-[72px] rounded-lg mt-5"></div>
+            <!-- image and overflow info  -->
+            <div class="relative w-[300px] h-[300px]">
+              <div class="overflow-hidden rounded-lg">
+                <img src="../../assets/images/introFrame.png" class="w-full h-full object-cover" alt="image" />
+              </div>
+              <div
+                class="rounded-lg py-3 overflow-hidden overflowInfo px-4 bg-[rgba(255,255,255,0.6)] absolute w-[280px] bottom-2 left-[50%] -translate-x-[50%]"
+              >
+                <div class="z-20 relative">
+                  <p class="text-brand-black opacity-90 font-albertBold capitalize">Gbajabiamila Aminat</p>
+                  <p class="capitalize opacity-50 text-brand-black">Senior Cloud Analyst</p>
                 </div>
-              </template>
-            </Hero>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Spotlight -->
     <section class="">
-      <div class="lg:flex items-center justify-center grid gap-12 lg:px-20 px-4 relative top-12 md:top-48">
+      <div class="md:flex md:flex-col lg:flex-row items-center justify-center space-y-16 lg:space-x-12 lg:space-y-0 lg:px-20 px-4 relative top-20 md:top-36">
         <SpotlightCard
           :img="require('@/assets/images/spot-light.svg')"
           bgColor="bg-brand-spot"
@@ -193,13 +133,14 @@
         />
       </div>
     </section>
+
     <!-- Reference -->
     <section>
-      <div class="bg-[#060505] md:h-[908px] flex justify-center">
-        <div class="md:px-36 flex items-center px-5 pb-20 md:pb-0 pt-24 md:pt-0">
-          <div class="">
-            <p class="text-white text-4xl pr-8 md:pr-0 font-albertBold lg:text-5xl mb-4 lg:w-2/5">Stand a chance to earn up to $1,000 🤑</p>
-            <p class="text-white font-normal text-base mb-4 md:w-[51%]">
+      <div class="bg-[#060505] md:h-[800px] flex justify-center">
+        <div class="md:px-36 flex items-center px-5 pb-20 md:pb-0 mt-36 md:pt-0">
+          <div class="lg:w-1/2">
+            <p class="text-white text-4xl pr-8 font-albertBold lg:text-5xl mb-4">Stand a chance to earn up to $1,000 🤑</p>
+            <p class="text-white font-normal text-base mb-4">
               Any of your high performing friends or colleagues looking for work? Send them our way. You could earn up to
               <span class="font-bold">$1,000 </span> if they get hired through CareerBuddy.
             </p>
@@ -219,12 +160,35 @@
             </ul>
             <Button label="Start Referring" color="primary" />
           </div>
-          <div class="hidden lg:block text-white">slider</div>
+          <div class="hidden lg:flex justify-center w-1/2">
+            <div class="relative flex items-center">
+              <!-- light divs  -->
+              <div class="w-[280px] h-[280px] absolute top-0 left-0 bg-white opacity-40 ml-9 rounded-lg mt-2.5"></div>
+              <div class="w-[260px] h-[260px] absolute top-0 left-0 bg-white opacity-20 ml-[72px] rounded-lg mt-5"></div>
+              <!-- image -->
+              <div class="overflow-hidden rounded-lg relative w-[300px] h-[300px]">
+                <img src="../../assets/images/manSlider.png" class="w-full h-full object-cover" alt="image" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
     <!-- Newsletter -->
-    <section></section>
+    <section class="lg:mt-20 lg:mx-20 mx-5 mt-12">
+      <div class="rounded-xl flex flex-col items-center justify-center newsletter md:h-[350px] py-10 px-5 md:px-0 md:py-0">
+        <h2 class="font-albertExtraBold text-brand-black text-4xl md:text-5xl text-center">Subscribe to our newsletter</h2>
+        <p class="text-brand-black opacity-80 md:w-[650px] text-center mt-3">
+          Get to know about top open jobs in Africa’s fastest-growing startups before anyone else. Every week, we'll send you all the top jobs in
+          startups across Africa.
+        </p>
+        <form class="flex items-center flex-col md:flex-row justify-between md:space-x-5 mt-5 space-y-5 md:space-y-0 w-full md:w-auto">
+          <input type="text" class="w-full md:w-[400px] px-5 py-4 border-none rounded-lg" placeholder="Enter your email address" />
+          <button class="w-full md:w-[180px] py-4 rounded-lg bg-brand-primary text-white font-medium">Subscribe</button>
+        </form>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -233,28 +197,13 @@ import Hero from '@/components/Hero.vue';
 import Slider from '@/components/Slider.vue';
 import SpotlightCard from '@/components/SpotlightCard.vue';
 import Label from '@/components/Label.vue';
-import Detail from '@/components/DetailSection.vue';
 import Check from '@/assets/icons/check.svg?inline';
 import Button from '@/components/Button.vue';
 import Loud from '@/assets/icons/loud.svg?inline';
 import Stroke from '@/assets/icons/stroke.svg?inline';
 import { ref } from 'vue';
+import DetailSection from '@/components/DetailSection.vue';
 
-const detailInfo = ref({
-  testimony: '"Careerbuddy supported me in every step of the hiring process and even helped me get favorable working terms with my employers.""',
-  labelText: 'FOR JOB SEEKERS',
-  profileImage: require('@/assets/images/hero.png'),
-  name: 'Teju Adeyinka',
-  role: 'Head of Growth, Buycoins',
-});
-const detailInfoTwo = ref({
-  testimony:
-    "“They make the recruitment process a lot less daunting. From how quickly they are able to source for candidates to ensuring the sourced candidates are of high quality and are a great fit for our company, they're great at what they do.”",
-  labelText: 'FOR COMPANIES',
-  profileImage: require('@/assets/images/hero.png'),
-  name: 'Segun Makinde',
-  role: 'Chief Operations Officer, Casava',
-});
 const cards = ref([
   { background: require('@/assets/images/sales.png') },
   { background: require('@/assets/images/hero.png') },
@@ -272,5 +221,37 @@ const cards = ref([
 <style scoped>
 .bg {
   background: url('../../assets/images/bg.svg');
+}
+
+.overflowInfo:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.newsletter {
+  background: url('../../assets/images/paper.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.intro-bg:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('../../assets/images/Vector.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
 }
 </style>

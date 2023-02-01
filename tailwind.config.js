@@ -11,10 +11,13 @@ module.exports = {
         albertBold: ['Albert Bold'],
         albertExtraBold: ['AlbertExtra'],
       },
+      boxShadow: {
+        '3xl': 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+      },
       colors: {
         'brand-black': '#1A0004',
         'brand-primary': '#FF2449',
-        'overlay': 'rgba(26, 0, 4, 0.7)',
+        overlay: 'rgba(26, 0, 4, 0.7)',
         'brand-primary-light': '#FFFCF0',
         'brand-green': '#089115',
         'brand-spot': '#ECB20A',

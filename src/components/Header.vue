@@ -1,5 +1,5 @@
 <template>
-  <nav class="sticky top-0 inset-x-0 z-30 w-screen lg:px-20 py-4 px-4 bg-white lg:mb-20 mb-10">
+  <nav class="sticky top-0 inset-x-0 z-30 w-full lg:px-20 py-4 px-4 bg-white lg:mb-20 mb-10">
     <div class="flex items-center justify-between">
       <div class="flex items-center">
         <router-link to="/" class="hidden lg:block"><img src="@/assets/images/logo.svg" alt="logo" class="object-cover" /></router-link>
@@ -53,5 +53,6 @@ const navItems = ref([
 <style scoped>
 .router-link-exact-active {
   color: #ff2449;
+  font-weight: 500;
 }
 </style>

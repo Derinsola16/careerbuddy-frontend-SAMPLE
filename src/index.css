@@ -30,3 +30,11 @@
   font-family: 'AlbertExtra';
   src: url('./assets/fonts/AlbertSans-ExtraBold.ttf');
 }
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
