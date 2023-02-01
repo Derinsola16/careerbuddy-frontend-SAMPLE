@@ -38,7 +38,7 @@
   <!-- carousel section -->
   <section>
     <div class="mt-16">
-      <h1>This is for the carousel</h1>
+      <h1 class=" bg-red-400 text-2xl">NOTE: THERE SHOULD BE A CAROUSEL HERE</h1>
     </div>
   </section>
 
@@ -290,20 +290,12 @@
 
   <section>
     <!-- carousel logo-->
-    <Slider>
-      <div class="flex">
-        <div v-for="x in 5" :key="x" class="items flex mr-3 space-x-3">
-          <img src="@/assets/icons/g8.svg" class="h-10" />
-          <img src="" class="h-10" />
-          <img src="" class="h-10" />
-        </div>
-      </div>
-    </Slider>
+    <h1 class=" bg-red-400 text-2xl">NOTE: THERE SHOULD BE A CAROUSEL HERE</h1>
   </section>
 
   <section>
     <!-- subscribe  -->
-    <div class="flex justify-around mt-20 w-[1264px] h-[343px] rounded-[20px] bg-black bg-[url('./assets/icons/bg-bg.png')]">
+    <div class="flex justify-around mt-20 w-[1264px] h-[343px] rounded-[20px] bg-black bg-[url('./assets/icons/bg-bg.png')] border-[1.162px] ">
       <div class="flex justify-center items-center w-[610px]">
         <div>
           <p class="w-[630px] h-[53px] font-[800] text-[48px] leading-[52.8px] -tracking-wide text-white font-albert text-center">

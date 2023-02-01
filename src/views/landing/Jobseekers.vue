@@ -80,8 +80,10 @@
                 Let founders and recruiters reach out to you.
               </li>
             </ul>
-            <div class="flex items-center mb-6 justify-center lg:justify-start">
-              <Button label="Find your next job" color="primary" class="mr-4" to="/signup" />
+            <div class="flex items-center mb-6 justify-center lg:justify-start w-[227px] h-[64px] rounded-[10px] bg-brand-primary">
+              <Button label="Find your next job" color="primary" class="h-[24px] font-albert font[600] text-white pl-[42px]" to="/signup">
+                Find your next job
+              </Button>
               <Button label="Learn More" color="primary" outline to="/jobseekers" />
             </div>
           </div>
@@ -110,8 +112,10 @@
               Introducing a new suite of tools to help you find a remote tech job, from anywhere in the world. Apply to get your profile featured
               directly to companies that are hiring remotely (including internationally).
             </p>
-            <div class="flex items-center mb-6 justify-center lg:justify-start">
-              <Button label="Hire Top Talent" color="primary" class="mr-4" to="/signup" />
+            <div class="flex items-center mb-6 justify-center lg:justify-start bg-brand-primary w-[227px] h-[64px] rounded-[10px]">
+              <Button label="Hire Top Talent" color="primary" class="h-[24px] font-albert font[600] text-white pl-[42px]" to="/signup"
+                >Find your next job</Button
+              >
               <Button label="Learn More" color="primary" outline to="/companies" />
             </div>
           </div>
@@ -166,32 +170,25 @@
     </section>
     <!-- Reference -->
     <section>
-      <div class="bg-[#060505] h-[908px] flex justify-center">
-        <div class="px-36 flex items-center">
-          <div class="">
-            <p class="text-white lg:font-albertBold lg:text-5xl mb-4 lg:w-2/5">Stand a chance to earn up to $1,000 🤑</p>
-            <p class="text-white font-normal text-base mb-4 w-[51%]">
-              Any of your high performing friends or colleagues looking for work? Send them our way. You could earn up to
-              <span class="font-bold">$1,000 </span> if they get hired through CareerBuddy.
-            </p>
-            <ul class="list-none font-normal lg:text-base text-sm text-opacity-60 text-brand-black mb-6">
-              <li class="flex items-center text-sm text-white mb-2">
-                <Check class="mr-3" fill="white" />
-                Sign up to create an account
-              </li>
-              <li class="flex items-center text-sm text-white mb-2">
-                <Check class="mr-3" fill="white" />
-                Refer your friends to sign up with us
-              </li>
-              <li class="flex items-center text-sm text-white">
-                <Check class="mr-3" fill="white" />
-                Get paid when they get hired
-              </li>
-            </ul>
-            <Button label="Start Referring" color="primary" />
+      <div class="bg-[#060505] pt-[90px] flex justify-center">
+        <div class="flex justify-around mt-20 w-[1264px] h-[343px] rounded-[20px] bg-black">
+      <div class="flex justify-center items-center w-[610px]">
+        <div>
+          <p class="w-[630px] h-[53px] font-[800] text-[48px] leading-[52.8px] -tracking-wide text-white font-albert text-center">
+            Subscribe to our newsletter
+          </p>
+          <p class="w-[630px] h-[48px] opacity-80 font-albert font-[400] text-[16px] -tracking-wide leading-[24px] text-white text-center mt-3">
+            Get to know about top open jobs in Africa’s fastest-growing startups before anyone else. Every week, we'll send you all the top jobs in
+            startups across Africa.
+          </p>
+          <!-- button -->
+          <div class="flex justify-between w-[660px] mt-5">
+            <input class="w-[460px] h-[64px] bg-white rounded-[10px]" type="text" />
+            <button class="w-[183px] h-[64px] rounded-[10px] bg-brand-primary text-[16px] font-albert font-[600] text-white">Subscribe</button>
           </div>
-          <div class="hidden lg:block text-white">slider</div>
         </div>
+      </div>
+    </div>
       </div>
     </section>
   </main>
