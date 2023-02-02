@@ -1,16 +1,16 @@
 <template>
   <main>
     <!-- w-[454px] -->
-    <div class="lg:flex items-center justify-between w-full">
-      <div class="lg:w-1/2 lg:pr-28">
+    <div class="md:flex items-center justify-between w-full">
+      <div class="md:w-1/2 lg:pr-28 mb-5 md:mb-0">
         <Label class="flex" v-if="labelText" :labelText="labelText" />
-        <p :class="[white ? 'text-white' : 'text-brand-black']" class="lg:text-[60px] font-albertExtraBold leading-[64px] mb-3">{{ title }}</p>
-        <p class="font-albertSmall mb-8" :class="[white ? 'text-white' : 'text-brand-black']">
+        <p :class="[white ? 'text-white' : 'text-brand-black']" class="lg:text-[60px] font-albertExtraBold text-5xl lg:leading-[64px] mb-3">{{ title }}</p>
+        <p class="font-albertSmall text-sm md:text-base mb-8" :class="[white ? 'text-white' : 'text-brand-black']">
           {{ caption }}
         </p>
         <slot name="button" />
       </div>
-      <div class="self-start">
+      <div class="self-start md:rounded-lg md:w-1/2 overflow-hidden">
         <VueCardStack
           :cards="cards"
           :card-width="350"

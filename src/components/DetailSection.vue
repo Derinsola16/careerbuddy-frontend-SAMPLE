@@ -1,10 +1,10 @@
 <template>
   <main>
     <div
-      class="lg:flex lg:px-20 px-4 items-center justify-between lg:pt-20 pt-10 w-full pb-9"
+      class="md:flex lg:px-20 px-5 items-center justify-between lg:pt-20 pt-10 w-full pb-9"
       :class="[imgLeft ? 'bg-white flex-row-reverse' : 'bg-[#FFFAFB]']"
     >
-      <div :class="[textHolder]" class="mb-12 lg:mb-0">
+      <div :class="[textHolder]" class="mb-12 lg:mb-0 md:w-1/2 lg:w-auto">
         <Label v-if="labelText" :labelText="labelText" class="w-44" />
         <slot name="text" />
         <div class="border-b-2 w-full border-black border-opacity-10 mb-6"></div>
@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div :class="[imageHolder]">
+      <div :class="[imageHolder]" class="md:w-1/2 lg:w-auto">
         <slot name="image" />
       </div>
     </div>
