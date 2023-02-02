@@ -43,7 +43,7 @@
 
     <!-- Details -->
     <div class="space-y-6 md:space-x-0">
-      <DetailSection />
+      <DetailSection2 />
     </div>
 
     <!-- Word on street -->
@@ -202,7 +202,7 @@ import Button from '@/components/Button.vue';
 import Loud from '@/assets/icons/loud.svg?inline';
 import Stroke from '@/assets/icons/stroke.svg?inline';
 import { ref } from 'vue';
-import DetailSection from '@/components/DetailSection.vue';
+import DetailSection2 from '@/components/DetailSection2.vue';
 
 const cards = ref([
   { background: require('@/assets/images/sales.png') },

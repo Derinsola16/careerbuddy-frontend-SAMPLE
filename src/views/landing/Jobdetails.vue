@@ -2,7 +2,7 @@
   <!-- overlay  -->
   <Overlay v-if="isOverlay" :hide-overlay="hideOverlay" />
   <!-- content  -->
-  <div class="px5 lg:px-20">
+  <div class="px-5 lg:px-20">
     <!-- back  -->
     <div class="flex items-center space-x-4 mb-12 cursor-pointer w-24">
       <div class="w-8 h-8 opacity-70">
@@ -21,15 +21,15 @@
     </div>
 
     <!-- company header  -->
-    <div class="flex item-center justify-between mb-8">
+    <div class="md:flex md:item-center md:justify-between mb-8 space-y-5 md:space-y-0">
       <!-- left side  -->
       <div class="flex items-center space-x-5">
-        <div class="rounded-full overflow-hidden w-18 h-18">
+        <div class="rounded-full overflow-hidden w-16 h-16 md:w-18 md:h-18">
           <img src="@/assets/images/complogo.png" class="w-full h-full object-cover" />
         </div>
         <div class="">
           <p class="text-sm text-brand-black opacity-70 font-semibold">cowrywise</p>
-          <h2 class="font-bold text-brand-black capitalize text-xl">senior front-end engineer</h2>
+          <h2 class="font-albertBold text-brand-black capitalize text-xl">senior front-end engineer</h2>
           <div class="flex items-center opacity-50 space-x-4 mt-1">
             <div class="flex items-center space-x-2">
               <div class="w-4 h-4">
@@ -100,7 +100,7 @@
       <div class="flex items-center space-x-6">
         <button
           @click="isTrue"
-          :class="isActive ? 'border-b-2 border-brand-primary text-brand-black font-bold' : 'text-brand-black opacity-50'"
+          :class="isActive ? 'border-b-2 border-brand-primary text-brand-black font-albertBold' : 'text-brand-black opacity-50'"
           class="py-3"
         >
           Job details
@@ -115,11 +115,11 @@
       </div>
 
       <!-- right div  -->
-      <p class="py-3 text-brand-black italic font-medium">Posted 4 days ago</p>
+      <p class="py-3 text-brand-black italic font-medium text-xs md:text-base">Posted 4 days ago</p>
     </div>
 
     <!-- Details to show when Job details is active -->
-    <div class="py-2 pr-12 mb-12" v-if="isActive">
+    <div class="py-2 md:pr-12 mb-12" v-if="isActive">
       <Details />
     </div>
 
@@ -129,7 +129,7 @@
       <CompanyInfo />
 
       <!-- open positions  -->
-      <div class="space-y-5 pb-10 border-b border-[#ccc]">
+      <div class="space-y-5 pb-10 border-b border-[#ccc] mt-12 md:mt-0">
         <div class="mt-8 flex justify-between items-center">
           <p class="text-xl text-brand-black font-bold capitalize">open positions (23)</p>
           <div class="flex items-center space-x-2 text-[#00973C]">

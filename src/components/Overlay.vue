@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-full flex items-center justify-center z-50 fixed inset-0 bg-overlay">
     <div class="absolute inset-0 h-full w-full cursor-pointer z-10 backdrop-blur-sm" @click="hideOverlay"></div>
-    <div class="rounded-xl bg-brand-red w-[500px] h-[230px] flex flex-col items-center justify-center space-y-5 z-50">
+    <div class="rounded-xl bg-brand-red p-5 md:p-0 md:w-[500px] md:h-[230px] flex flex-col items-center justify-center space-y-5 z-50">
       <div class="w-[350px] text-center space-y-1">
         <h2 class="text-[white] font-bold text-2xl">Sign in to continue</h2>
         <p class="text-xs text-[white]">Sign up to get access to all the features we’ve built just for you at Careerbuddy.</p>
