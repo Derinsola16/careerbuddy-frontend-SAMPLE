@@ -46,7 +46,7 @@
   <section>
     <div class="w-11/12 justify-center mt-14">
       <div>
-        <div class="font-[400] text-[56px] text-[#1A0004] leading-[67.2px] font-albert">
+        <div class="font-[400] text-[56px] text-brand-black leading-[67.2px] font-albert opacity-70">
           Companies think we’re the new cool,
           <p class="font-[800] text-[56px] leading-[67.2px]">Here’s why:</p>
         </div>

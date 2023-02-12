@@ -9,10 +9,25 @@
         caption="We make it easy to find your dream job - regardless of your location. Browse over 100,000 jobs from top companies to fast-growing startups."
       >
         <template #button>
-          <button class="bg-brand-primary hidden lg:block text-[white] w-[180px] py-5 rounded-lg" to="/signup">Join us</button>
+          <div class="flex space-x-5">
+            <div class="flex border w-[386px] h-[64px] bg-[#FAFAFA] rounded-[10px]">
+              <div class="w-[50px] flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-[#D9D3D5]">
+                  <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                  <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                </svg>
+              </div>
+              <input class="border-none w-full bg-[#FAFAFA] rounded-[10px]" type="text" placeholder="Enter your email address" />
+            </div>
+            <button class="w-[179px] h-[64px] rounded-[10px] bg-[#FF2449] text-[16px] font-[600] text-[#FFFFFF] font-albertSmall">
+              Start hiring
+            </button>
+          </div>
+
+          <!-- <button class="bg-brand-primary hidden lg:block text-[white] w-[180px] py-5 rounded-lg" to="/signup">Join us</button>
           <div class="flex space-x-5 lg:hidden">
             <Button label="Find a job" color="primary" to="/jobseekers" /> <Button label="Hire Top Talent" color="primary" to="/companies" outline />
-          </div>
+          </div> -->
         </template>
       </Hero>
     </section>
