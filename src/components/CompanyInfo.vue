@@ -1,7 +1,7 @@
 <template>
   <div class="lg:flex">
     <!-- left div  -->
-    <div class="md:border scroll md:border-bg-brand-[#E8E5E6] rounded-xl h-[600px] md:w-[75%] md:p-6 overflow-auto">
+    <div class="md:border scroll md:border-bg-brand-[#E8E5E6] rounded-xl lg:h-[600px] lg:w-[75%] md:p-6 lg:overflow-auto">
       <p>
         Knack seeks to maximize the impact of peer tutoring on student success on college campuses. We do this by providing colleges a central
         dashboard to manage and scale their peer tutoring programs as well as providing students a beautiful consumer-facing application to easily
