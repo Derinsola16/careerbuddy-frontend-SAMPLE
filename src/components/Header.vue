@@ -8,13 +8,24 @@
           We’re hiring! 🎉
         </p>
       </div>
-      <Nav fill="black" class="lg:hidden" />
+
+      <Nav fill="black" class="lg:hidden cursor-pointer" @click="toggleNav" />
+
       <div class="lg:flex items-center hidden">
         <div v-for="item in navItems" :key="item.name" class="ml-10 text-brand-black text-opacity-60 font-normal text-base whitespace-nowrap">
           <router-link :to="item.link">{{ item.name }}</router-link>
         </div>
         <Button label="Sign up" color="black" class="ml-12" />
         <Button label="Log in" color="black" outline class="ml-4" />
+      </div>
+      <!-- For mobile  -->
+      <div
+        class="z-[99] fixed top-[-500px] duration-200 bg-white w-[95%] rounded-br-xl rounded-bl-xl left-[50%] opacity-0 -translate-x-[50%] lg:hidden"
+        :class="showNav && 'top-[65px] opacity-100'"
+      >
+        <li v-for="item in navItems" :key="item.name" class="list-none text-center py-4">
+          <router-link :to="item.link">{{ item.name }}</router-link>
+        </li>
       </div>
     </div>
   </nav>
@@ -47,6 +58,21 @@ const navItems = ref([
     link: 'https://blog.tamborin.io/',
   },
 ]);
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      showNav: false,
+    };
+  },
+  methods: {
+    toggleNav() {
+      this.showNav = !this.showNav;
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
