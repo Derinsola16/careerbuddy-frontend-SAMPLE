@@ -1,7 +1,7 @@
 <template>
   <main>
     <!-- Hero -->
-    <section class="mb-32">
+    <section class="mb-10 md:mb-32">
       <Hero
         class="lg:pl-20 pr-4 px-5"
         :cards="cards"
@@ -10,8 +10,24 @@
       >
         <template #button>
           <div class="flex space-x-5">
-            <Button label="Find a job" color="primary" to="/jobseekers" /> <Button label="Hire Top Talent" color="primary" to="/companies" outline />
+            <div class="flex border w-[386px] h-[64px] bg-[#FAFAFA] rounded-[10px]">
+              <div class="w-[50px] flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-[#D9D3D5]">
+                  <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                  <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                </svg>
+              </div>
+              <input class="border-none w-full bg-[#FAFAFA] rounded-[10px]" type="text" placeholder="Enter your email address" />
+            </div>
+            <button class="w-[179px] h-[64px] rounded-[10px] bg-[#FF2449] text-[16px] font-[600] text-[#FFFFFF] font-albertSmall">
+              Start hiring
+            </button>
           </div>
+
+          <!-- <button class="bg-brand-primary hidden lg:block text-[white] w-[180px] py-5 rounded-lg" to="/signup">Join us</button>
+          <div class="flex space-x-5 lg:hidden">
+            <Button label="Find a job" color="primary" to="/jobseekers" /> <Button label="Hire Top Talent" color="primary" to="/companies" outline />
+          </div> -->
         </template>
       </Hero>
     </section>
@@ -31,11 +47,44 @@
     <section>
       <div class="lg:mt-28 mt-20">
         <div class="flex items-center flex-col px-4 text-center mb-7 lg:mb-9">
-          <p class="font-albertBold lg:text-5xl text-4xl text-brand-black mb-3 text-center">
+          <p class="font-albertExtraBold lg:text-5xl text-4xl text-brand-black mb-3 text-center">
             Sit back and let the <br />
             opportunities come to you
           </p>
         </div>
+
+        <!-- Search job query -->
+        <Search class="hidden lg:flex" />
+        <!-- search job query for mobile screens -->
+        <div class="mt-5 px-4 mb-10 lg:hidden">
+          <div class="relative">
+            <input type="text" class="border border-[#DBD6D8] rounded-full w-full p-4" />
+            <div class="text-[white] rounded-full bg-brand-primary p-3 absolute right-0 -top-1 cursor-pointer">
+              <svg viewBox="0 0 24 24" class="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  transform="translate(2 4)"
+                >
+                  <path d="m4.5 0c.55228475 0 1 .44771525 1 1v2c0 .55228475-.44771525 1-1 1s-1-.44771525-1-1v-2c0-.55228475.44771525-1 1-1z" />
+                  <path d="m16.5 2h-11" />
+                  <path d="m3.5 2h-3" />
+                  <path d="m4.5 10c.55228475 0 1 .4477153 1 1v2c0 .5522847-.44771525 1-1 1s-1-.4477153-1-1v-2c0-.5522847.44771525-1 1-1z" />
+                  <path d="m16.5 12h-11" />
+                  <path d="m3.5 12h-3" />
+                  <path d="m12.5 5c.5522847 0 1 .44771525 1 1v2c0 .55228475-.4477153 1-1 1s-1-.44771525-1-1v-2c0-.55228475.4477153-1 1-1z" />
+                  <path d="m11.5 7h-11" />
+                  <path d="m16.5 7h-3" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
         <img src="@/assets/images/connect.svg" alt="" class="m-auto" />
       </div>
     </section>
@@ -50,16 +99,16 @@
         class="relative lg:bottom-[15.3rem] bottom-20"
       >
         <template #text>
-          <div class="">
-            <p class="font-normal lg:text-5xl text-4xl text-brand-black text-opacity-70 mb-4 whitespace-nowrap">
-              <span class="font-albertBold text-brand-black whitespace-nowrap">Find the job made for you.</span> <br />
-              Level up your job search
+          <div class="pr-8 md:pr-0">
+            <p class="font-normal lg:text-5xl text-[40px] leading-[44px] text-brand-black text-opacity-70 mb-4">
+              Find the job made for you.
+              <span class="font-albertExtraBold text-brand-black">Level up your job search</span>
             </p>
             <p class="font-normal lg:text-base text-sm text-brand-black text-opacity-80 mb-3">
               We provide access to top companies, a community of experts, and resources that can help accelerate your career.
             </p>
             <ul class="list-none font-normal lg:text-base text-sm text-opacity-60 text-brand-black mb-6">
-              <li class="flex items-center">
+              <li class="flex items-center mb-2">
                 <Check fill="#1A0004" class="mr-3" />
                 Unique jobs in niche industries
               </li>
@@ -76,9 +125,10 @@
                 Let founders and recruiters reach out to you.
               </li>
             </ul>
-            <div class="flex items-center mb-6 justify-center lg:justify-start">
-              <Button label="Find your next job" color="primary" class="mr-4" to="/signup" />
-              <Button label="Learn More" color="primary" outline to="/jobseekers" />
+            <div class="flex items-center mb-6 justify-center lg:justify-start w-[227px] h-[64px] rounded-[10px] bg-brand-primary">
+              <Button label="Find your next job" color="primary" class="h-[24px] font-albert font[600] text-white md:pl-[42px]" to="/signup">
+                Find your next job
+              </Button>
             </div>
           </div>
         </template>
@@ -97,7 +147,7 @@
         imgLeft
       >
         <template #text>
-          <div class="">
+          <div class="pr-8 md:pr-0">
             <p class="font-normal lg:text-5xl text-4xl text-brand-black text-opacity-70 mb-4 whitespace-nowra">
               Skip the commute. <br />
               <span class="font-albertBold text-brand-black">We are bringing the office to you.</span>
@@ -106,9 +156,10 @@
               Introducing a new suite of tools to help you find a remote tech job, from anywhere in the world. Apply to get your profile featured
               directly to companies that are hiring remotely (including internationally).
             </p>
-            <div class="flex items-center mb-6 justify-center lg:justify-start">
-              <Button label="Hire Top Talent" color="primary" class="mr-4" to="/signup" />
-              <Button label="Learn More" color="primary" outline to="/companies" />
+            <div class="flex items-center mb-6 justify-center lg:justify-start bg-brand-primary w-[227px] h-[64px] rounded-[10px]">
+              <Button label="Hire Top Talent" color="primary" class="h-[24px] font-albert font[600] text-white md:pl-[42px]" to="/signup"
+                >Find your next job</Button
+              >
             </div>
           </div>
         </template>
@@ -162,31 +213,28 @@
     </section>
     <!-- Reference -->
     <section>
-      <div class="bg-[#060505] h-[908px] flex justify-center">
-        <div class="px-36 flex items-center">
-          <div class="">
-            <p class="text-white lg:font-albertBold lg:text-5xl mb-4 lg:w-2/5">Stand a chance to earn up to $1,000 🤑</p>
-            <p class="text-white font-normal text-base mb-4 w-[51%]">
-              Any of your high performing friends or colleagues looking for work? Send them our way. You could earn up to
-              <span class="font-bold">$1,000 </span> if they get hired through CareerBuddy.
-            </p>
-            <ul class="list-none font-normal lg:text-base text-sm text-opacity-60 text-brand-black mb-6">
-              <li class="flex items-center text-sm text-white mb-2">
-                <Check class="mr-3" fill="white" />
-                Sign up to create an account
-              </li>
-              <li class="flex items-center text-sm text-white mb-2">
-                <Check class="mr-3" fill="white" />
-                Refer your friends to sign up with us
-              </li>
-              <li class="flex items-center text-sm text-white">
-                <Check class="mr-3" fill="white" />
-                Get paid when they get hired
-              </li>
-            </ul>
-            <Button label="Start Referring" color="primary" />
+      <div class="bg-[#060505] pt-[120px] md:pt-[90px] flex justify-center">
+        <div class="flex justify-around mt-20 md:w-[1264px] md:h-[343px] rounded-[20px] bg-black">
+          <div class="flex p-10 md:px-0 justify-center items-center md:w-[610px]">
+            <div>
+              <p class="md:w-[630px] md:h-[53px] font-albertExtraBold text-4xl md:text-5xl md:-tracking-wide text-white text-center px-8 md:px-0">
+                Subscribe to our newsletter
+              </p>
+              <p
+                class="md:w-[630px] md:h-[48px] opacity-80 font-albert font-[400] text-sm md:text-[16px] md:-tracking-wide leading-[24px] text-white text-center mt-3"
+              >
+                Get to know about top open jobs in Africa’s fastest-growing startups before anyone else. Every week, we'll send you all the top jobs
+                in startups across Africa.
+              </p>
+              <!-- button -->
+              <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 justify-between md:w-[660px] mt-5">
+                <input class="w-full md:w-[460px] h-[64px] bg-white rounded-[10px]" type="text" />
+                <button class="w-full md:w-[183px] h-[64px] rounded-[10px] bg-brand-primary text-[16px] font-albert font-[600] text-white">
+                  Subscribe
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="hidden lg:block text-white">slider</div>
         </div>
       </div>
     </section>
@@ -202,6 +250,8 @@ import Loud from '@/assets/icons/loud.svg?inline';
 import Label from '@/components/Label.vue';
 import SpotlightCard from '@/components/SpotlightCard.vue';
 import { ref } from 'vue';
+import Search from '@/components/Search.vue';
+import Button from '@/components/Button.vue';
 
 const cards = ref([
   { background: require('@/assets/images/sales.png') },
