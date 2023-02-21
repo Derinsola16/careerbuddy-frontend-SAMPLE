@@ -217,15 +217,21 @@
         <div class="flex justify-around mt-20 md:w-[1264px] md:h-[343px] rounded-[20px] bg-black">
           <div class="flex p-10 md:px-0 justify-center items-center md:w-[610px]">
             <div>
-              <p class="md:w-[630px] md:h-[53px] font-albertExtraBold text-4xl md:text-5xl md:-tracking-wide text-white text-center px-8 md:px-0">Subscribe to our newsletter</p>
-              <p class="md:w-[630px] md:h-[48px] opacity-80 font-albert font-[400] text-sm md:text-[16px] md:-tracking-wide leading-[24px] text-white text-center mt-3">
+              <p class="md:w-[630px] md:h-[53px] font-albertExtraBold text-4xl md:text-5xl md:-tracking-wide text-white text-center px-8 md:px-0">
+                Subscribe to our newsletter
+              </p>
+              <p
+                class="md:w-[630px] md:h-[48px] opacity-80 font-albert font-[400] text-sm md:text-[16px] md:-tracking-wide leading-[24px] text-white text-center mt-3"
+              >
                 Get to know about top open jobs in Africa’s fastest-growing startups before anyone else. Every week, we'll send you all the top jobs
                 in startups across Africa.
               </p>
               <!-- button -->
               <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 justify-between md:w-[660px] mt-5">
                 <input class="w-full md:w-[460px] h-[64px] bg-white rounded-[10px]" type="text" />
-                <button class="w-full md:w-[183px] h-[64px] rounded-[10px] bg-brand-primary text-[16px] font-albert font-[600] text-white">Subscribe</button>
+                <button class="w-full md:w-[183px] h-[64px] rounded-[10px] bg-brand-primary text-[16px] font-albert font-[600] text-white">
+                  Subscribe
+                </button>
               </div>
             </div>
           </div>

@@ -36,3 +36,6 @@
     --color-primary: 26 0 4 0.7;
   }
 }
+body {
+  overflow-x: hidden;
+}

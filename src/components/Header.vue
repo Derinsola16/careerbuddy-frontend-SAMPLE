@@ -1,5 +1,5 @@
 <template>
-  <nav class="sticky top-0 inset-x-0 z-30 w-screen lg:px-20 py-4 px-4 bg-white lg:mb-20 mb-10">
+  <nav class="sticky top-0 inset-x-0 z-30 w-full lg:px-20 py-4 px-4 bg-white lg:mb-20 mb-10">
     <div class="flex items-center justify-between">
       <div class="flex items-center">
         <router-link to="/" class="hidden lg:block"><img src="@/assets/images/logo.svg" alt="logo" class="object-cover" /></router-link>
@@ -8,13 +8,24 @@
           We’re hiring! 🎉
         </p>
       </div>
-      <Nav fill="black" class="lg:hidden" />
+
+      <Nav fill="black" class="lg:hidden cursor-pointer" @click="toggleNav" />
+
       <div class="lg:flex items-center hidden">
         <div v-for="item in navItems" :key="item.name" class="ml-10 text-brand-black text-opacity-60 font-normal text-base whitespace-nowrap">
-          <router-link :to="item.link">{{ item.name }}</router-link>
+          <router-link :to="item.link" :target="item.target">{{ item.name }}</router-link>
         </div>
         <Button label="Sign up" color="black" class="ml-12" />
         <Button label="Log in" color="black" outline class="ml-4" />
+      </div>
+      <!-- For mobile  -->
+      <div
+        class="z-[99] fixed top-[-500px] duration-200 bg-white w-[95%] rounded-br-xl rounded-bl-xl left-[50%] opacity-0 -translate-x-[50%] lg:hidden"
+        :class="showNav && 'top-[65px] opacity-100'"
+      >
+        <li v-for="item in navItems" :key="item.name" class="list-none text-center py-4">
+          <router-link :to="item.link">{{ item.name }}</router-link>
+        </li>
       </div>
     </div>
   </nav>
@@ -29,29 +40,49 @@ const navItems = ref([
   {
     name: 'Home',
     link: '/',
+    // target: '#',
   },
   {
     name: 'Jobseekers',
     link: '/jobseekers',
+    // target: '#',
   },
   {
     name: 'For Companies',
     link: 'companies',
+    // target: '#',
   },
-  {
-    name: 'Careers',
-    link: 'careers',
-  },
+  // {
+  //   name: 'Careers',
+  //   link: 'careers',
+  // },
   {
     name: 'Blog',
     link: 'https://blog.tamborin.io/',
+    target: '_blank',
   },
 ]);
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      showNav: false,
+    };
+  },
+  methods: {
+    toggleNav() {
+      this.showNav = !this.showNav;
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .router-link-exact-active {
   color: #ff2449;
+  font-weight: 500;
 }
 </style>

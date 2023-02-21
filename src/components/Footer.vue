@@ -1,8 +1,8 @@
 <template>
-  <footer class="bg-[#FFFAFB] md:py-10 md:px-10 lg:mx-20 md:mx-10 p-4 mb-9 rounded-3xl">
+  <footer class="w-[90%] bg-[#FFFAFB] mx-auto mt-12 md:py-10 md:px-10 lg:mx-20 md:mx-10 p-4 mb-9 rounded-3xl">
     <div class="md:flex justify-between grid gap-x-8 gap-y-6 grid-cols-2 items-start mb-6">
       <div>
-        <p class="text-sm text-brand-black text-opacity-60 font-normal mb-6">Product</p>
+        <p class="text-sm text-brand-black text-opacity-60 font-normal mb-4 md:mb-6">Product</p>
         <div class="font-albertMedium whitespace-nowrap leading-6 tracking-[0.02em] font-extrabold text-brand-black">
           <p class="mb-3">Login</p>
           <p class="mb-3">Pricing</p>

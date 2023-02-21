@@ -14,8 +14,16 @@
       <div class="relative">
         <input type="text" class="border border-[#DBD6D8] rounded-full w-full p-4" />
         <div class="text-[white] rounded-full bg-brand-primary p-3 absolute right-0 -top-1 cursor-pointer">
-          <svg viewBox="0 0 24 24" class="w-10 h-10 " xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" fill-rule="evenodd" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 4)">
+          <svg viewBox="0 0 24 24" class="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
+            <g
+              fill="none"
+              fill-rule="evenodd"
+              stroke-width="1.5"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              transform="translate(2 4)"
+            >
               <path d="m4.5 0c.55228475 0 1 .44771525 1 1v2c0 .55228475-.44771525 1-1 1s-1-.44771525-1-1v-2c0-.55228475.44771525-1 1-1z" />
               <path d="m16.5 2h-11" />
               <path d="m3.5 2h-3" />
@@ -38,7 +46,9 @@
         </div>
 
         <!-- search result -->
-        <ResultCard />
+        <div v-for="i in 10" :key="i">
+          <ResultCard />
+        </div>
       </div>
     </div>
   </div>

@@ -18,7 +18,7 @@ export default {
     barStyle: Object,
     duration: {
       type: String,
-      default: '15s',
+      default: '45s',
     },
     direction: {
       type: String,
